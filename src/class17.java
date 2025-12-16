@@ -220,8 +220,8 @@ class class17 implements SSLSession {
             int var14 = var5 * var12 + 1 >> 17;
             int var15 = var5 * var11 >> 17;
             int var16 = var5 * var11 + 1 >> 17;
-            var0 -= Rasterizer2D.Rasterizer2D_xClipStart;
-            var1 -= Rasterizer2D.Rasterizer2D_yClipStart;
+            var0 -= Rasterizer2D.drawRegionX;
+            var1 -= Rasterizer2D.drawingAreaTop;
             int var17 = var0 + var13;
             int var18 = var0 - var14;
             int var19 = var0 + var6 - var14;
@@ -231,9 +231,9 @@ class class17 implements SSLSession {
             int var23 = var7 + var1 - var16;
             int var24 = var7 + var15 + var1;
             Rasterizer3D.method1153(var17, var18, var19);
-            Rasterizer3D.method1155(var21, var22, var23, var17, var18, var19, var4);
+            Rasterizer3D.rasterFlat(var21, var22, var23, var17, var18, var19, var4);
             Rasterizer3D.method1153(var17, var19, var20);
-            Rasterizer3D.method1155(var21, var23, var24, var17, var19, var20, var4);
+            Rasterizer3D.rasterFlat(var21, var23, var24, var17, var19, var20, var4);
         }
     }
 }

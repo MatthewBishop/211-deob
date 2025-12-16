@@ -37,7 +37,7 @@ public final class NPC extends Actor {
             } else {
                 var3.calculateBoundsCylinder();
                 super.defaultHeight = var3.height;
-                int var4 = var3.indicesCount;
+                int var4 = var3.triangleCount;
                 if (super.spotAnimation != -1 && super.spotAnimationFrame != -1) {
                     Model var5 = MouseRecorder.SpotAnimationDefinition_get(super.spotAnimation)
                             .getModel(super.spotAnimationFrame);

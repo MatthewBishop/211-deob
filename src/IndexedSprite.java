@@ -69,37 +69,37 @@ public final class IndexedSprite extends Rasterizer2D {
     public void drawAt(int var1, int var2) {
         var1 += this.xOffset;
         var2 += this.yOffset;
-        int var3 = var1 + var2 * Rasterizer2D.Rasterizer2D_width;
+        int var3 = var1 + var2 * Rasterizer2D.graphicsPixelsWidth;
         int var4 = 0;
         int var5 = this.subHeight;
         int var6 = this.subWidth;
-        int var7 = Rasterizer2D.Rasterizer2D_width - var6;
+        int var7 = Rasterizer2D.graphicsPixelsWidth - var6;
         int var8 = 0;
         int var9;
-        if (var2 < Rasterizer2D.Rasterizer2D_yClipStart) {
-            var9 = Rasterizer2D.Rasterizer2D_yClipStart - var2;
+        if (var2 < Rasterizer2D.drawingAreaTop) {
+            var9 = Rasterizer2D.drawingAreaTop - var2;
             var5 -= var9;
-            var2 = Rasterizer2D.Rasterizer2D_yClipStart;
+            var2 = Rasterizer2D.drawingAreaTop;
             var4 += var9 * var6;
-            var3 += var9 * Rasterizer2D.Rasterizer2D_width;
+            var3 += var9 * Rasterizer2D.graphicsPixelsWidth;
         }
 
-        if (var5 + var2 > Rasterizer2D.Rasterizer2D_yClipEnd) {
-            var5 -= var5 + var2 - Rasterizer2D.Rasterizer2D_yClipEnd;
+        if (var5 + var2 > Rasterizer2D.drawingAreaBottom) {
+            var5 -= var5 + var2 - Rasterizer2D.drawingAreaBottom;
         }
 
-        if (var1 < Rasterizer2D.Rasterizer2D_xClipStart) {
-            var9 = Rasterizer2D.Rasterizer2D_xClipStart - var1;
+        if (var1 < Rasterizer2D.drawRegionX) {
+            var9 = Rasterizer2D.drawRegionX - var1;
             var6 -= var9;
-            var1 = Rasterizer2D.Rasterizer2D_xClipStart;
+            var1 = Rasterizer2D.drawRegionX;
             var4 += var9;
             var3 += var9;
             var8 += var9;
             var7 += var9;
         }
 
-        if (var6 + var1 > Rasterizer2D.Rasterizer2D_xClipEnd) {
-            var9 = var6 + var1 - Rasterizer2D.Rasterizer2D_xClipEnd;
+        if (var6 + var1 > Rasterizer2D.drawingAreaRight) {
+            var9 = var6 + var1 - Rasterizer2D.drawingAreaRight;
             var6 -= var9;
             var8 += var9;
             var7 += var9;
@@ -141,28 +141,28 @@ public final class IndexedSprite extends Rasterizer2D {
             var4 = (var12 + ((var6 << 16) - var8) - 1) / var12;
         }
 
-        var13 = var1 + var2 * Rasterizer2D.Rasterizer2D_width;
-        int var14 = Rasterizer2D.Rasterizer2D_width - var3;
-        if (var2 + var4 > Rasterizer2D.Rasterizer2D_yClipEnd) {
-            var4 -= var2 + var4 - Rasterizer2D.Rasterizer2D_yClipEnd;
+        var13 = var1 + var2 * Rasterizer2D.graphicsPixelsWidth;
+        int var14 = Rasterizer2D.graphicsPixelsWidth - var3;
+        if (var2 + var4 > Rasterizer2D.drawingAreaBottom) {
+            var4 -= var2 + var4 - Rasterizer2D.drawingAreaBottom;
         }
 
         int var15;
-        if (var2 < Rasterizer2D.Rasterizer2D_yClipStart) {
-            var15 = Rasterizer2D.Rasterizer2D_yClipStart - var2;
+        if (var2 < Rasterizer2D.drawingAreaTop) {
+            var15 = Rasterizer2D.drawingAreaTop - var2;
             var4 -= var15;
-            var13 += var15 * Rasterizer2D.Rasterizer2D_width;
+            var13 += var15 * Rasterizer2D.graphicsPixelsWidth;
             var8 += var12 * var15;
         }
 
-        if (var3 + var1 > Rasterizer2D.Rasterizer2D_xClipEnd) {
-            var15 = var3 + var1 - Rasterizer2D.Rasterizer2D_xClipEnd;
+        if (var3 + var1 > Rasterizer2D.drawingAreaRight) {
+            var15 = var3 + var1 - Rasterizer2D.drawingAreaRight;
             var3 -= var15;
             var14 += var15;
         }
 
-        if (var1 < Rasterizer2D.Rasterizer2D_xClipStart) {
-            var15 = Rasterizer2D.Rasterizer2D_xClipStart - var1;
+        if (var1 < Rasterizer2D.drawRegionX) {
+            var15 = Rasterizer2D.drawRegionX - var1;
             var3 -= var15;
             var13 += var15;
             var7 += var11 * var15;

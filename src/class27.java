@@ -90,7 +90,7 @@ public class class27 {
     static final void drawInterface(Widget[] var0, int var1, int var2, int var3, int var4, int var5, int var6, int var7,
             int var8) {
         Rasterizer2D.Rasterizer2D_setClip(var2, var3, var4, var5);
-        Rasterizer3D.Rasterizer3D_setClipFromRasterizer2D();
+        Rasterizer3D.setRasterClipping();
 
         for (int var9 = 0; var9 < var0.length; ++var9) {
             Widget var10 = var0[var9];
@@ -284,7 +284,7 @@ public class class27 {
                             }
 
                             Rasterizer2D.Rasterizer2D_setClip(var2, var3, var4, var5);
-                            Rasterizer3D.Rasterizer3D_setClipFromRasterizer2D();
+                            Rasterizer3D.setRasterClipping();
                         } else if (var10.type == 11) {
                             if (class160.isComponentHidden(var10) && var10 != KeyHandler.mousedOverWidgetIf1) {
                                 continue;
@@ -296,7 +296,7 @@ public class class27 {
                             }
 
                             Rasterizer2D.Rasterizer2D_setClip(var2, var3, var4, var5);
-                            Rasterizer3D.Rasterizer3D_setClipFromRasterizer2D();
+                            Rasterizer3D.setRasterClipping();
                         }
 
                         if (Client.isResizable || Client.field428[var11] || Client.gameDrawingMode > 1) {
@@ -372,9 +372,9 @@ public class class27 {
                                                             if (var1 != -1) {
                                                                 Widget var28 = var0[var1 & '\uffff'];
                                                                 int var29;
-                                                                if (var23 + var25 < Rasterizer2D.Rasterizer2D_yClipStart
+                                                                if (var23 + var25 < Rasterizer2D.drawingAreaTop
                                                                         && var28.scrollY > 0) {
-                                                                    var29 = (Rasterizer2D.Rasterizer2D_yClipStart
+                                                                    var29 = (Rasterizer2D.drawingAreaTop
                                                                             - var23 - var25) * Client.field442 / 3;
                                                                     if (var29 > Client.field442 * 10) {
                                                                         var29 = Client.field442 * 10;
@@ -390,11 +390,11 @@ public class class27 {
                                                                 }
 
                                                                 if (var23 + var25
-                                                                        + 32 > Rasterizer2D.Rasterizer2D_yClipEnd
+                                                                        + 32 > Rasterizer2D.drawingAreaBottom
                                                                         && var28.scrollY < var28.scrollHeight
                                                                                 - var28.height) {
                                                                     var29 = (var23 + var25 + 32
-                                                                            - Rasterizer2D.Rasterizer2D_yClipEnd)
+                                                                            - Rasterizer2D.drawingAreaBottom)
                                                                             * Client.field442 / 3;
                                                                     if (var29 > Client.field442 * 10) {
                                                                         var29 = Client.field442 * 10;
@@ -647,7 +647,7 @@ public class class27 {
                                                 }
                                             }
 
-                                            Rasterizer3D.method1174(var10.width / 2 + var12, var10.height / 2 + var13);
+                                            Rasterizer3D.setOffset(var10.width / 2 + var12, var10.height / 2 + var13);
                                             var23 = Rasterizer3D.Rasterizer3D_sine[var10.modelAngleX]
                                                     * var10.modelZoom >> 16;
                                             var24 = Rasterizer3D.Rasterizer3D_cosine[var10.modelAngleX]
@@ -672,7 +672,7 @@ public class class27 {
                                                 }
                                             }
 
-                                            Rasterizer3D.Rasterizer3D_method3();
+                                            Rasterizer3D.updateClippingBounds();
                                         } else {
                                             if (var10.type == 7) {
                                                 var42 = var10.getFont();

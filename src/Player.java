@@ -219,7 +219,7 @@ public final class Player extends Actor {
             } else {
                 var3.calculateBoundsCylinder();
                 super.defaultHeight = var3.height;
-                int var4 = var3.indicesCount;
+                int var4 = var3.triangleCount;
                 Model var5;
                 Model[] var6;
                 if (!this.isUnanimated && super.spotAnimation != -1 && super.spotAnimationFrame != -1) {

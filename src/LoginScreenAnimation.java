@@ -327,9 +327,9 @@ public class LoginScreenAnimation {
 
             for (int var9 = var6; var9 < var7; ++var9) {
                 int var10 = this.field1016[var2++];
-                int var11 = var8 % Rasterizer2D.Rasterizer2D_width;
-                if (var10 != 0 && var11 >= Rasterizer2D.Rasterizer2D_xClipStart
-                        && var11 < Rasterizer2D.Rasterizer2D_xClipEnd) {
+                int var11 = var8 % Rasterizer2D.graphicsPixelsWidth;
+                if (var10 != 0 && var11 >= Rasterizer2D.drawRegionX
+                        && var11 < Rasterizer2D.drawingAreaRight) {
                     int var12 = var10;
                     int var13 = 256 - var10;
                     var10 = this.field1029[var10];

@@ -2142,10 +2142,10 @@ public class ModelData extends Renderable {
         var8.verticesX = this.verticesX;
         var8.verticesY = this.verticesY;
         var8.verticesZ = this.verticesZ;
-        var8.indicesCount = this.faceCount;
-        var8.indices1 = this.indices1;
-        var8.indices2 = this.indices2;
-        var8.indices3 = this.indices3;
+        var8.triangleCount = this.faceCount;
+        var8.triangleVertex1 = this.indices1;
+        var8.triangleVertex2 = this.indices2;
+        var8.triangleVertex3 = this.indices3;
         var8.faceRenderPriorities = this.faceRenderPriorities;
         var8.faceAlphas = this.faceAlphas;
         var8.field2154 = this.priority;

@@ -176,13 +176,13 @@ public class FriendsChat extends UserList {
             int var3 = Scene.Scene_cameraYawCosine;
             byte var4 = 50;
             short var5 = 3500;
-            int var6 = (ViewportMouse.ViewportMouse_x - Rasterizer3D.Rasterizer3D_clipMidX) * var4
+            int var6 = (ViewportMouse.ViewportMouse_x - Rasterizer3D.centerX) * var4
                     / Rasterizer3D.Rasterizer3D_zoom;
-            int var7 = (ViewportMouse.ViewportMouse_y - Rasterizer3D.Rasterizer3D_clipMidY) * var4
+            int var7 = (ViewportMouse.ViewportMouse_y - Rasterizer3D.centerY) * var4
                     / Rasterizer3D.Rasterizer3D_zoom;
-            int var8 = (ViewportMouse.ViewportMouse_x - Rasterizer3D.Rasterizer3D_clipMidX) * var5
+            int var8 = (ViewportMouse.ViewportMouse_x - Rasterizer3D.centerX) * var5
                     / Rasterizer3D.Rasterizer3D_zoom;
-            int var9 = (ViewportMouse.ViewportMouse_y - Rasterizer3D.Rasterizer3D_clipMidY) * var5
+            int var9 = (ViewportMouse.ViewportMouse_y - Rasterizer3D.centerY) * var5
                     / Rasterizer3D.Rasterizer3D_zoom;
             int var10 = Rasterizer3D.method1168(var7, var4, var1, var0);
             int var11 = Rasterizer3D.method1167(var7, var4, var1, var0);

@@ -492,8 +492,8 @@ public class WorldMap {
             this.method2245(var1, var2, var3, var4, var8, var9);
             var10 = Client.staffModLevel >= 2;
             if (var10 && this.showCoord && this.mouseCoord != null) {
-                this.font.draw("Coord: " + this.mouseCoord, Rasterizer2D.Rasterizer2D_xClipStart + 10,
-                        Rasterizer2D.Rasterizer2D_yClipStart + 20, 16776960, -1);
+                this.font.draw("Coord: " + this.mouseCoord, Rasterizer2D.drawRegionX + 10,
+                        Rasterizer2D.drawingAreaTop + 20, 16776960, -1);
             }
 
             this.worldMapDisplayWidth = var8;

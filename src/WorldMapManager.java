@@ -124,7 +124,7 @@ public final class WorldMapManager {
 
     public final void drawTiles(int var1, int var2, int var3, int var4, int var5, int var6, int var7, int var8) {
         int[] var9 = Rasterizer2D.Rasterizer2D_pixels;
-        int var10 = Rasterizer2D.Rasterizer2D_width;
+        int var10 = Rasterizer2D.graphicsPixelsWidth;
         int var11 = Rasterizer2D.Rasterizer2D_height;
         int[] var12 = new int[4];
         Rasterizer2D.Rasterizer2D_getClipArray(var12);

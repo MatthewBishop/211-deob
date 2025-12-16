@@ -898,35 +898,35 @@ public abstract class AbstractFont extends Rasterizer2D {
     }
 
     static void AbstractFont_drawGlyph(byte[] var0, int var1, int var2, int var3, int var4, int var5) {
-        int var6 = var1 + var2 * Rasterizer2D.Rasterizer2D_width;
-        int var7 = Rasterizer2D.Rasterizer2D_width - var3;
+        int var6 = var1 + var2 * Rasterizer2D.graphicsPixelsWidth;
+        int var7 = Rasterizer2D.graphicsPixelsWidth - var3;
         int var8 = 0;
         int var9 = 0;
         int var10;
-        if (var2 < Rasterizer2D.Rasterizer2D_yClipStart) {
-            var10 = Rasterizer2D.Rasterizer2D_yClipStart - var2;
+        if (var2 < Rasterizer2D.drawingAreaTop) {
+            var10 = Rasterizer2D.drawingAreaTop - var2;
             var4 -= var10;
-            var2 = Rasterizer2D.Rasterizer2D_yClipStart;
+            var2 = Rasterizer2D.drawingAreaTop;
             var9 += var3 * var10;
-            var6 += var10 * Rasterizer2D.Rasterizer2D_width;
+            var6 += var10 * Rasterizer2D.graphicsPixelsWidth;
         }
 
-        if (var2 + var4 > Rasterizer2D.Rasterizer2D_yClipEnd) {
-            var4 -= var2 + var4 - Rasterizer2D.Rasterizer2D_yClipEnd;
+        if (var2 + var4 > Rasterizer2D.drawingAreaBottom) {
+            var4 -= var2 + var4 - Rasterizer2D.drawingAreaBottom;
         }
 
-        if (var1 < Rasterizer2D.Rasterizer2D_xClipStart) {
-            var10 = Rasterizer2D.Rasterizer2D_xClipStart - var1;
+        if (var1 < Rasterizer2D.drawRegionX) {
+            var10 = Rasterizer2D.drawRegionX - var1;
             var3 -= var10;
-            var1 = Rasterizer2D.Rasterizer2D_xClipStart;
+            var1 = Rasterizer2D.drawRegionX;
             var9 += var10;
             var6 += var10;
             var8 += var10;
             var7 += var10;
         }
 
-        if (var3 + var1 > Rasterizer2D.Rasterizer2D_xClipEnd) {
-            var10 = var3 + var1 - Rasterizer2D.Rasterizer2D_xClipEnd;
+        if (var3 + var1 > Rasterizer2D.drawingAreaRight) {
+            var10 = var3 + var1 - Rasterizer2D.drawingAreaRight;
             var3 -= var10;
             var8 += var10;
             var7 += var10;
@@ -985,35 +985,35 @@ public abstract class AbstractFont extends Rasterizer2D {
     }
 
     static void AbstractFont_drawGlyphAlpha(byte[] var0, int var1, int var2, int var3, int var4, int var5, int var6) {
-        int var7 = var1 + var2 * Rasterizer2D.Rasterizer2D_width;
-        int var8 = Rasterizer2D.Rasterizer2D_width - var3;
+        int var7 = var1 + var2 * Rasterizer2D.graphicsPixelsWidth;
+        int var8 = Rasterizer2D.graphicsPixelsWidth - var3;
         int var9 = 0;
         int var10 = 0;
         int var11;
-        if (var2 < Rasterizer2D.Rasterizer2D_yClipStart) {
-            var11 = Rasterizer2D.Rasterizer2D_yClipStart - var2;
+        if (var2 < Rasterizer2D.drawingAreaTop) {
+            var11 = Rasterizer2D.drawingAreaTop - var2;
             var4 -= var11;
-            var2 = Rasterizer2D.Rasterizer2D_yClipStart;
+            var2 = Rasterizer2D.drawingAreaTop;
             var10 += var3 * var11;
-            var7 += var11 * Rasterizer2D.Rasterizer2D_width;
+            var7 += var11 * Rasterizer2D.graphicsPixelsWidth;
         }
 
-        if (var2 + var4 > Rasterizer2D.Rasterizer2D_yClipEnd) {
-            var4 -= var2 + var4 - Rasterizer2D.Rasterizer2D_yClipEnd;
+        if (var2 + var4 > Rasterizer2D.drawingAreaBottom) {
+            var4 -= var2 + var4 - Rasterizer2D.drawingAreaBottom;
         }
 
-        if (var1 < Rasterizer2D.Rasterizer2D_xClipStart) {
-            var11 = Rasterizer2D.Rasterizer2D_xClipStart - var1;
+        if (var1 < Rasterizer2D.drawRegionX) {
+            var11 = Rasterizer2D.drawRegionX - var1;
             var3 -= var11;
-            var1 = Rasterizer2D.Rasterizer2D_xClipStart;
+            var1 = Rasterizer2D.drawRegionX;
             var10 += var11;
             var7 += var11;
             var9 += var11;
             var8 += var11;
         }
 
-        if (var3 + var1 > Rasterizer2D.Rasterizer2D_xClipEnd) {
-            var11 = var3 + var1 - Rasterizer2D.Rasterizer2D_xClipEnd;
+        if (var3 + var1 > Rasterizer2D.drawingAreaRight) {
+            var11 = var3 + var1 - Rasterizer2D.drawingAreaRight;
             var3 -= var11;
             var9 += var11;
             var8 += var11;

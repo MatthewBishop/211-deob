@@ -178,15 +178,15 @@ public class TextureProvider implements TextureLoader {
             }
 
             int[] var12 = Rasterizer2D.Rasterizer2D_pixels;
-            int var13 = Rasterizer2D.Rasterizer2D_width;
+            int var13 = Rasterizer2D.graphicsPixelsWidth;
             int var14 = Rasterizer2D.Rasterizer2D_height;
             int[] var15 = new int[4];
             Rasterizer2D.Rasterizer2D_getClipArray(var15);
             var8 = new SpritePixels(36, 32);
             Rasterizer2D.Rasterizer2D_replace(var8.pixels, 36, 32);
             Rasterizer2D.Rasterizer2D_clear();
-            Rasterizer3D.Rasterizer3D_setClipFromRasterizer2D();
-            Rasterizer3D.method1174(16, 16);
+            Rasterizer3D.setRasterClipping();
+            Rasterizer3D.setOffset(16, 16);
             Rasterizer3D.field1966 = false;
             if (var9.placeholderTemplate != -1) {
                 var20.drawTransBgAt(0, 0);
@@ -235,7 +235,7 @@ public class TextureProvider implements TextureLoader {
 
             Rasterizer2D.Rasterizer2D_replace(var12, var13, var14);
             Rasterizer2D.Rasterizer2D_setClipArray(var15);
-            Rasterizer3D.Rasterizer3D_setClipFromRasterizer2D();
+            Rasterizer3D.setRasterClipping();
             Rasterizer3D.field1966 = true;
             return var8;
         }
