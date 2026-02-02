@@ -5,10 +5,7 @@ import java.applet.AudioClip;
 import java.awt.BorderLayout;
 import java.awt.Desktop;
 import java.awt.Image;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
@@ -51,14 +48,8 @@ public class _VanillaLauncher implements AppletStub, AppletContext {
     }
 
     public static void loadParamaters() {
-        URL url = null;
-        try {
-            url = new URL("http://oldschool.runescape.com/jav_config.ws");
-        } catch (MalformedURLException e) {
-            throw new RuntimeException(e);
-        }
         try (BufferedReader reader = new BufferedReader(
-                new InputStreamReader(url.openStream(), StandardCharsets.ISO_8859_1))) {
+                new InputStreamReader(new FileInputStream("./jav_config.ws"), StandardCharsets.ISO_8859_1))) {
             String line;
             while ((line = reader.readLine()) != null) {
                 String[] split1 = line.split("=", 2);

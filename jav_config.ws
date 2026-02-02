@@ -1,6 +1,6 @@
 title=Old School RuneScape
 adverturl=http://www.runescape.com/g=oldscape/bare_advert.ws
-codebase=http://oldschool14.runescape.com/
+codebase=http://127.0.0.1/
 cachedir=oldschool
 storebase=0
 initial_jar=gamepack_3535415.jar
@@ -22,7 +22,7 @@ applet_minheight=503
 applet_maxwidth=5760
 applet_maxheight=2160
 msg=lang0=English
-msg=tandc=This game is copyright © 1999 - 2023 Jagex Ltd.\Use of this game is subject to our ["http://www.runescape.com/terms/terms.ws"Terms and Conditions] and ["http://www.runescape.com/privacy/privacy.ws"Privacy Policy].
+msg=tandc=This game is copyright ï¿½ 1999 - 2023 Jagex Ltd.\Use of this game is subject to our ["http://www.runescape.com/terms/terms.ws"Terms and Conditions] and ["http://www.runescape.com/privacy/privacy.ws"Privacy Policy].
 msg=options=Options
 msg=language=Language
 msg=changes_on_restart=Your changes will take effect when you next start this program.
